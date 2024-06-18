@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculador de Pagos Mensuales</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Agregar Producto</h1>
+            <form id="productForm">
+                <label for="productName">Nombre del producto:</label>
+                <input type="text" id="productName" name="productName" required>
+                
+                <label for="productPrice">Precio del producto:</label>
+                <input type="number" id="productPrice" name="productPrice" required>
+                
+                <label for="productInstallments">Número de cuotas:</label>
+                <input type="number" id="productInstallments" name="productInstallments" required>
+                
+                <button type="button" onclick="addProduct()">Agregar Producto</button>
+            </form>
+            <div id="productList"></div>
+        </div>
+        <div class="calculation-container">
+            <button type="button" onclick="calculateTotalPayments()">Calcular Pagos Totales</button>
+            <div id="totalPayments"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
